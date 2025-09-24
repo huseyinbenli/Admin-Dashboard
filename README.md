@@ -1,2 +1,5 @@
 # Admin-Dashboard
-Full dashboard desing to hone my grid skills.
+
+Hello,
+
+This is a dashboard desing project from The Oding Project in order to work work on grid.
