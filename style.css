@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--font-family);
 }
 
 @layer base {
@@ -20,6 +21,14 @@ body {
   }
 }
 
+.left-column {
+  background-color: var(--color-blue);
+}
+
+.bottom-row {
+  background-color: var(--color-bg);
+}
+
 @layer layout {
   .wrapper-grid {
     display: grid;
@@ -27,8 +36,13 @@ body {
   }
 
   .left-column {
-    height: max(600px, 100%);
     display: grid;
+    grid-template-rows: repeat(
+      auto-fit,
+      minmax(100px, 120px) minmax(300px, 400px) minmax(150px, 200px)
+    );
+    color: var(--color-white);
+    row-gap: 2rem;
   }
 
   .right-column {
@@ -86,10 +100,26 @@ body {
   }
 }
 
-.left-column {
-  background-color: var(--color-blue);
-}
+@layer dashboard {
+  .logo-dashboard-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-left: 1rem;
+  }
 
-.bottom-row {
-  background-color: var(--color-bg);
+  .nav-wrapper,
+  .nav-bottom-wrapper {
+    display: grid;
+  }
+
+  .nav {
+    display: flex;
+    padding-left: 1rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    filter: invert(1);
+  }
 }
