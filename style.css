@@ -78,7 +78,7 @@ body {
 
   .profile-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: max-content 1fr;
   }
 
   .profile-small {
@@ -103,6 +103,19 @@ body {
 
   .profile-name-big p:first-child {
     font-size: 12px;
+  }
+
+  .button-wrapper {
+    align-self: center;
+  }
+
+  .btn {
+    background-color: var(--color-blue);
+    border: none;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 16px;
+    color: var(--color-white);
+    margin-left: 1.5rem;
   }
 
   .bottom-row {
