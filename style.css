@@ -10,6 +10,10 @@ body {
   font-family: var(--font-family);
 }
 
+p:not(.salutation) {
+  color: #555;
+}
+
 @layer base {
   :root {
     --color-white: white;
@@ -96,6 +100,11 @@ body {
     justify-items: center;
   }
 
+  .profile-name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
   .profile-name-big {
     justify-self: start;
     font-weight: bold;
@@ -107,6 +116,8 @@ body {
 
   .button-wrapper {
     align-self: center;
+    justify-self: end;
+    margin-right: 2rem;
   }
 
   .btn {
@@ -115,7 +126,7 @@ body {
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 16px;
     color: var(--color-white);
-    margin-left: 1.5rem;
+    margin-left: 1rem;
   }
 
   .bottom-row {
@@ -129,7 +140,6 @@ body {
 
   .projects-container {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
@@ -141,15 +151,7 @@ body {
 
   .side-content-wrapper {
     display: grid;
-    grid-template-rows: 50px 1fr 50px 1fr;
     padding: 1rem;
-  }
-
-  .announce-container {
-    background-color: var(--color-white);
-  }
-  .trending-profile {
-    background-color: var(--color-white);
   }
 }
 
@@ -184,5 +186,68 @@ body {
     display: flex;
     justify-content: end;
     gap: 1rem;
+  }
+
+  .project {
+    display: grid;
+    align-content: space-between;
+    border-radius: 6px;
+    border-left: solid 8px var(--color-yellow);
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@layer side-content {
+  .announce-text {
+    margin-top: 0;
+  }
+
+  .announce-div:not(.announce-div:last-child) {
+    border-bottom: solid 1px var(--color-bg);
+  }
+
+  .announce-div h3 {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .announce-card {
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: var(--color-white);
+  }
+  .announce-card p {
+    font-size: 10px;
+  }
+
+  .trend-card p {
+    font-size: 10px;
+  }
+
+  .trend-card {
+    background-color: var(--color-white);
+    border-radius: 8px;
+  }
+
+  .trending-profile {
+    display: flex;
+    gap: 1rem;
+    padding: 2px;
+  }
+
+  .trending-profile img {
+    margin: 0.5rem;
+  }
+
+  .trend-name {
+    margin: 1rem 0 1rem 0;
+  }
+
+  .trend-name p {
+    margin: 0;
   }
 }
